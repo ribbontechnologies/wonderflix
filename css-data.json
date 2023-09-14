@@ -1,0 +1,13 @@
+{
+  "version": 1.1,
+  "atDirectives": [
+    {
+      "name": "@apply",
+      "description": "Tailwind directive to apply a set of styles to an element."
+    },
+    {
+      "name": "@tailwind",
+      "description": "Tailwind directive to apply base, components, and utilities styles."
+    }
+  ]
+}
