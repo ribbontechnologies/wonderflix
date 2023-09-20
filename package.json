@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "client": "yarn workspace client dev",
-    "backend": "yarn workspace server dev",
+    "backend": "yarn workspace server prisma generate && yarn workspace server dev",
     "dev": "yarn && npm-run-all --parallel client backend"
   },
   "devDependencies": {
