@@ -88,70 +88,77 @@ const films = [
       'A young girl navigating a world of gods, witches, and spirits after her parents are turned into pigs.',
     releaseDate: '2001-07-20T00:00:00.000Z',
     cover:
-      'https://i.pinimg.com/originals/a3/9d/c2/a39dc262be097a3772320947a7e2d50f.jpg'
+      'https://occ-0-33-32.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABSfHQxcoUhV-Hf227L9kYAHKaO1SSSF3zPVbj32Hms4So3BvkdIumM5sbI8JYqo9OCpOuNT_2Ba_T6PFNUYSs-h_rmPjc-4ylcPE.jpg?r=2e8'
   },
   {
     title: 'Fight Club',
     description:
       'An insomniac office worker and a soapmaker form an underground fight club.',
     releaseDate: '1999-10-15T00:00:00.000Z',
-    cover: 'https://m.media-amazon.com/images/I/71vCuq9ImhL._AC_SY679_.jpg'
+    cover:
+      'https://privacytable.com/wp-content/uploads/2021/11/Watch-Fight-Club-on-Netflix.jpeg'
   },
   {
     title: 'The Lord of the Rings: The Fellowship of the Ring',
     description:
       'A young hobbit sets out to destroy a powerful ring before it falls into the wrong hands.',
     releaseDate: '2001-12-19T00:00:00.000Z',
-    cover: 'https://m.media-amazon.com/images/I/81xS%2B7TRTUL._AC_SY679_.jpg'
+    cover:
+      'https://occ-0-325-1433.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABXKZ0XUQ0vZKYQyBJZCJxKK6NBkKNrGe-vfrNYT-iqoQmFvB__xzCjL1t-kadkmzJ-dZZZmZ-E_bl15M7HDY0Z-wDLmuLDp2Wq4X.jpg?r=91a'
   },
   {
     title: 'Interstellar',
     description:
       'A team of explorers travel through a wormhole in search of a new habitable planet.',
     releaseDate: '2014-11-07T00:00:00.000Z',
-    cover: 'https://m.media-amazon.com/images/I/91kFYg4fX3L._AC_SY679_.jpg'
+    cover:
+      'https://frontmediaspot.com/wp-content/uploads/2023/07/Interstellar-3-1200x675.jpg'
   },
   {
     title: 'Gladiator',
     description:
       'A betrayed Roman General seeks justice after he is relegated to fighting to the death in the Colosseum.',
     releaseDate: '2000-05-05T00:00:00.000Z',
-    cover: 'https://m.media-amazon.com/images/I/51Z09xjsHhL._AC_.jpg'
+    cover:
+      'https://occ-0-34-58.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABaPVPUhQBZ2y60RQqPDgOq5NU3jxzgPNwAzSl4Nz9IGpMPRVLYsqfSrl4-Cro-1CAF3xkRfmW1AZrubPZj_g6X4hFyM6JlLOF7nL.jpg?r=805'
   },
   {
     title: 'Goodfellas',
     description:
       'The rise and fall of mob associate Henry Hill and his friends over a period from 1955 to 1980.',
     releaseDate: '1990-09-19T00:00:00.000Z',
-    cover: 'https://m.media-amazon.com/images/I/718FucdWIDL._AC_SY679_.jpg'
+    cover:
+      'https://m.media-amazon.com/images/S/pv-target-images/180965683ea19e4386f073c56509dfc8909a644dc2b0fe590ee9e7b5fe267ca8.jpg'
   },
   {
     title: 'Eternal Sunshine of the Spotless Mind',
     description:
       'A man undergoes a medical procedure to have a failed relationship erased from his memory, only to regret it.',
     releaseDate: '2004-03-19T00:00:00.000Z',
-    cover: 'https://m.media-amazon.com/images/I/81UZC+FCk3L._AC_SY679_.jpg'
+    cover:
+      'https://occ-0-999-55.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABY8ex66ZvXaDgAxtXGfMkVNU-u-7htl_gfTKFb15DJXhLs4OPG7RWJ63xJfr4a6KlZLInoWJnospZ2BYKLhY3XwlGD-vKm9azKh2.jpg?r=e55'
   },
   {
     title: 'Inglourious Basterds',
     description:
       "In Nazi-occupied France during World War II, a plan to assassinate Nazi leaders converges with a theater owner's vengeful plans for the same.",
     releaseDate: '2009-08-21T00:00:00.000Z',
-    cover: 'https://m.media-amazon.com/images/I/71lciXtwvHL._AC_SY679_.jpg'
+    cover: 'https://ntvb.tmsimg.com/assets/p193875_v_h8_aq.jpg?w=1280&h=720'
   },
   {
     title: '12 Angry Men',
     description:
       'A jury holdout attempts to prevent a miscarriage of justice by forcing his colleagues to reconsider the evidence.',
     releaseDate: '1957-04-10T00:00:00.000Z',
-    cover: 'https://m.media-amazon.com/images/I/71XM5oNd8yL._AC_SY679_.jpg'
+    cover: 'https://scdn.nflximg.net/images/5334/9735334.jpg'
   },
   {
     title: 'La La Land',
     description:
       'A jazz pianist and an aspiring actress fall in love but face difficulties as they become more successful.',
     releaseDate: '2016-12-09T00:00:00.000Z',
-    cover: 'https://m.media-amazon.com/images/I/91WWO9A7sFL._AC_SY679_.jpg'
+    cover:
+      'https://occ-0-299-988.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABSFwfbCy6oDzBvMxgqeX5-FaCpydbUhb91GIImVy7UGPtVyCYptevb79FSf0hIWADti4IRhq0SJ8UHKY0ZCUDnnuwbjK9VNINGlE.jpg?r=57a'
   }
 ]
 
