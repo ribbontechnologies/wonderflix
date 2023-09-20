@@ -15,13 +15,5 @@ model Film {
   title       String
   description String?
   releaseDate DateTime
-  actors      Actor[]
   cover       String?
-}
-
-model Actor {
-  id    Int     @id @default(autoincrement())
-  name  String
-  films Film[]
-  image String?
 }
