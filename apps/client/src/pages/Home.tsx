@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { SuggestionBox } from '../components/SuggestionBox'
 
 export type Film = {
   title: string
@@ -50,6 +51,8 @@ export function Home () {
           </li>
         ))}
       </ul>
+
+      <SuggestionBox />
     </div>
   )
 }
