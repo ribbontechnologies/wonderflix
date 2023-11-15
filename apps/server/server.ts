@@ -1,6 +1,7 @@
 import express from "express";
 import { PrismaClient } from "@prisma/client";
 import { getCompletion } from "./services/openai";
+import { ASSISTANT_PROMPT, JSON_RETURN } from "./prompts";
 
 const app = express();
 const prisma = new PrismaClient();
@@ -36,9 +37,42 @@ app.get("/get-dashboard-films", async (req, res) => {
 app.post("/get-completion", async (req, res) => {
   const { messages } = req.body;
 
-  const chatCompletion = await getCompletion(messages);
+  const chatCompletion = await getCompletion([
+    {
+      content: ASSISTANT_PROMPT,
+      role: "system",
+    },
+    ...messages,
+  ]);
+  if (!chatCompletion?.content) return res.status(500).send();
+  const isRecommendingFilmsCheck = await getCompletion([
+    {
+      content:
+        "Detect if the assistant message is recommending films. if it is, return 'yes' and only 'yes'. if not, return 'no' and only 'no'.",
+      role: "system",
+    },
+    {
+      content: chatCompletion.content || "",
+      role: "assistant",
+    },
+  ]);
+  if (!isRecommendingFilmsCheck?.content) return res.status(500).send();
 
-  res.json({ message: chatCompletion });
+  let recommendation;
+  if (chatCompletion.content && isRecommendingFilmsCheck.content.toLowerCase().includes("yes")) {
+    recommendation = await getCompletion([
+      {
+        role: "system",
+        content: JSON_RETURN,
+      },
+      {
+        content: chatCompletion?.content,
+        role: "user",
+      },
+    ]);
+  }
+
+  res.json({ message: recommendation || chatCompletion });
 });
 
 app.listen(3000, () => {

@@ -19,6 +19,27 @@ export function SuggestionBox() {
 
   const lastAssistantMessage = history.filter((message) => message.role === "assistant").slice(-1)[0];
 
+  async function getNextMessage(content?: string) {
+    const conversationSoFar = content ? [...history, { content, role: "user" }] : history;
+    try {
+      const data = await fetch("http://localhost:3000/get-completion", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          messages: conversationSoFar,
+        }),
+      }).then((res) => res.json());
+
+      setHistory([...conversationSoFar, data.message]);
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setStatus("chatting");
+    }
+  }
+
   return (
     <div
       className={cn(
@@ -86,23 +107,7 @@ export function SuggestionBox() {
               const content = e.currentTarget.text.value;
               e.currentTarget.reset();
 
-              try {
-                const data = await fetch("http://localhost:3000/get-completion", {
-                  method: "POST",
-                  headers: {
-                    "Content-Type": "application/json",
-                  },
-                  body: JSON.stringify({
-                    messages: [...history, { content, role: "user" }],
-                  }),
-                }).then((res) => res.json());
-
-                setHistory([...history, { content, role: "user" }, data.message]);
-              } catch (err) {
-                console.error(err);
-              } finally {
-                setStatus("chatting");
-              }
+              await getNextMessage(content);
             }}
           >
             <input
