@@ -14,11 +14,14 @@ app.use((req, res, next) => {
 app.use(express.json());
 
 app.get("/get-dashboard-films", async (req, res) => {
+  // just grab 8 films and pretend they are the trending and for you films since we don't have a recommender system
   const films = await prisma.film.findMany({
     take: 8,
   });
+  const trending = films.slice(0, 4);
+  const forYou = films.slice(4);
 
-  const recentFilms = await prisma.film.findMany({
+  const recent = await prisma.film.findMany({
     take: 5,
     orderBy: {
       releaseDate: "desc",
@@ -26,12 +29,11 @@ app.get("/get-dashboard-films", async (req, res) => {
   });
 
   res.json({
-    trending: films.slice(0, 4),
-    forYou: films.slice(4),
-    recent: recentFilms,
+    trending,
+    forYou,
+    recent,
   });
 });
-
 
 app.listen(3000, () => {
   console.log("Server listening on port 3000");
